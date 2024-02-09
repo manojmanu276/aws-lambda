@@ -1,0 +1,15 @@
+#add this trust policy with role you create in aws-dev-account
+#aws iam --> create-role-->custom trust policy-->add the below policy-->add permissions-->add permissions to create s3 bucket--->give appropriate role name---> create role
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::qa-accounti-id:role/qa-role-name"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
