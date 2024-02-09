@@ -1,0 +1,8 @@
+#declare environment variables as below
+#declare in aws_mgmt_console--->lambda--->your_lamda_function--->configuration-tab--->environment-variables
+
+KEY                     ---------------------------->        VALUE
+CA_ROLE_NAME                                          name_of_the_role_you_have_to_create_in_qa-account_with_trust_policy_with_dev-account
+DEV_ACCOUNT_ID                                        your_dev_account_id
+REGION                                                reqd_region(e.g. ap-south-1, us-east-1)
+ROLE_ARN                                              arn_of_the_role_you_have_to_create_in_dev_account(this role must have permissions to create s3 bucket and must have a attached trust policy with qa-account)
