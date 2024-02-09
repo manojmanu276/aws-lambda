@@ -1,0 +1,16 @@
+#this trust policy has to be attached with role created in aws-qa-account
+#aws iam-->roles-->create_role-->for service lambda-->attach permission like AWSLambdaExecution-->give appropriate name-->create-role
+#aws-iam-->policy-->create_policy-->add the below policy-->create-->attach with above created role
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::dev_account_id:role/dev-account-role"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
