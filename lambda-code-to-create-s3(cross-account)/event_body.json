@@ -1,0 +1,6 @@
+#add this event body in aws_mgmt_console--->your_lamba_function---->Test tab--->give_appropriate_test_name
+
+{
+  "customer_id": "12345",
+  "bucket_name": "siem",
+}
